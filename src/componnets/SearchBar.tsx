@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
     fontSize: scale(16),
     fontFamily: Fonts.bilo,
     color: Colors.black,
+    flex: 1
   },
 });
 

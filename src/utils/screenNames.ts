@@ -4,5 +4,7 @@ export const screenNames = {
     menu: 'MenuScreen',
     cart: 'CartScreen',
     fav: 'FavoriteScreen',
-    account: 'Account'
+    account: 'AccountScreen',
+    product: 'ProductScreen'
+
 }

@@ -1,17 +1,21 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { Colors } from '../utils/colors';
-import { scale } from 'react-native-size-matters';
+import {StatusBar, StyleSheet} from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
+import {Colors} from '../utils/colors';
+import {scale} from 'react-native-size-matters';
 
 interface ContainerProps {
-    children: React.ReactNode
+  children: React.ReactNode;
+  product?: boolean;
 }
 
-const Container: React.FC<ContainerProps> = ({children}) => {
+const Container: React.FC<ContainerProps> = ({children, product = false}) => {
   return (
-    <SafeAreaView edges={['top']} style={styles.container}>
-      {children}
+    <SafeAreaView style={styles.container}>
+      <React.Fragment>
+        <StatusBar barStyle={product ? 'light-content' : 'dark-content'} />
+        {children}
+      </React.Fragment>
     </SafeAreaView>
   );
 };
@@ -21,7 +25,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.grey,
     paddingVertical: scale(10),
-    paddingHorizontal: scale(15)
+    paddingHorizontal: scale(15),
   },
 });
 
