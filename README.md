@@ -1,5 +1,10 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
+## Preview on IOS
+
+![Kapture 2025-12-31 at 00 15 48](https://github.com/user-attachments/assets/211d4e3a-90e0-4dac-aea7-7e4d398c1287)
+
+
 # Getting Started
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
@@ -35,6 +40,9 @@ yarn android
 ### For iOS
 
 ```bash
+# install pods
+cd ios && pod install && cd ..
+
 # using npm
 npm run ios
 
